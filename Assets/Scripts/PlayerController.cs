@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private void ClickCheck()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             CastRay();
             if (!target)
@@ -68,5 +68,29 @@ public class PlayerController : MonoBehaviour
         {
             target = hit.collider.gameObject;  //히트 된 게임 오브젝트를 타겟으로 지정
         }
+    }
+
+
+    //건물버는가격받아오기
+    public int ReturnTowerMoney()
+    {
+        int value = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            value += CulturalHeritage.GetComponent<Tower>().towermoney;
+            Debug.Log(CulturalHeritage.name + "건물비" + CulturalHeritage.GetComponent<Tower>().towermoney);
+        }
+        return value;
+    }
+    //건물관리비받아오기
+    public int ReturnTowerFree()
+    {
+        int value = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            value += CulturalHeritage.GetComponent<Tower>().free;
+            Debug.Log(CulturalHeritage.name + "관리비" + CulturalHeritage.GetComponent<Tower>().free);
+        }
+        return value;
     }
 }
