@@ -11,7 +11,7 @@ public class RandomMision : MonoBehaviour
     public PlayerController playerController;
     public Sprite[] missionSprite;
 
-    int rand;
+    public int rand;
     int missionNum;
 
     public bool missionBool;
@@ -39,7 +39,7 @@ public class RandomMision : MonoBehaviour
     {
         if (!missionBool)
         {
-            rand = UnityEngine.Random.Range(0, 100) + 1;
+            rand = UnityEngine.Random.Range(0, 10) + 1;
         }
     }
 
