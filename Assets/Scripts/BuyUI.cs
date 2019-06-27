@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuyUI : MonoBehaviour
 {
@@ -24,11 +25,12 @@ public class BuyUI : MonoBehaviour
         if (pretargetobject != targetobject)
         {
             transform.FindChild("UpgradeButton").gameObject.SetActive(true);
-            pretargetobject = targetobject;
             transform.FindChild("Pictures").gameObject.GetComponent<SpriteRenderer>().sprite = targetobject.GetComponent<Tower>().image_UI;
             if (targetobject.GetComponent<Tower>().level == 3)
                 transform.FindChild("UpgradeButton").gameObject.SetActive(false);
-            pretargetobject = null; 
+
+            transform.FindChild("Canvas").transform.FindChild("Text").gameObject.GetComponent<Text>().text = targetobject.GetComponent<Tower>().subText;
+            pretargetobject = null;
         }
     }
 }
