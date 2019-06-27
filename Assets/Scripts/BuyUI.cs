@@ -24,7 +24,7 @@ public class BuyUI : MonoBehaviour
         if (pretargetobject != targetobject)
         {
             pretargetobject = targetobject;
-            transform.FindChild("Image").gameObject.GetComponent<SpriteRenderer>().sprite = targetobject.GetComponent<Tower>().image_UI;
+            transform.FindChild("Pictures").gameObject.GetComponent<SpriteRenderer>().sprite = targetobject.GetComponent<Tower>().image_UI;
             if (targetobject.GetComponent<Tower>().level == 3)
                 transform.FindChild("UpgradeButtorn").gameObject.SetActive(false);
         }
