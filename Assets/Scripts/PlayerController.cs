@@ -173,15 +173,15 @@ public class PlayerController : MonoBehaviour
         {
             if (CulturalHeritage.GetComponent<Tower>().level == 1)
             {
-                num += CulturalHeritage.GetComponent<Tower>().endpeople /3; //5
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / Random.Range(3, 6); //5
             }
             else if (CulturalHeritage.GetComponent<Tower>().level == 2)
             {
-                num += CulturalHeritage.GetComponent<Tower>().endpeople / 6;   //10
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / Random.Range(5, 9);   //10
             }
             else if (CulturalHeritage.GetComponent<Tower>().level == 3)
             {
-                num += CulturalHeritage.GetComponent<Tower>().endpeople /10;    //20
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / Random.Range(10, 18);    //20
             }
         }
         return num;
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
         {
             if (CulturalHeritage.GetComponent<Tower>().level == 1)
             {
-                num += CulturalHeritage.GetComponent<Tower>().endpeople /3;
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / Random.Range(3, 5);
             }
             else if (CulturalHeritage.GetComponent<Tower>().level == 2)
             {
@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour
         {
             if (CulturalHeritage.GetComponent<Tower>().level == 1)
             {
-                num += CulturalHeritage.GetComponent<Tower>().endpeople * value /3;
+                num += CulturalHeritage.GetComponent<Tower>().endpeople * value / Random.Range(3, 5);
             }
             else if (CulturalHeritage.GetComponent<Tower>().level == 2)
             {
