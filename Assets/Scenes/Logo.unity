@@ -805,8 +805,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: 8a2332b832632ee428ef4ff7d74ecc40, type: 3}
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -844,7 +844,8 @@ MonoBehaviour:
     \uC81C1\uC720\uD615\n\uC775\uC0B0 \uC81C\uC11D\uC0AC\uC9C0 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD
     \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC \uC81C1\uC720\uD615\n\uC775\uC0B0
     \uCC9C\uD638\uB3D9\uAD74 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
-    \uC81C1\uC720\uD615\nTHANKS TO : PUBG \uB0A8\uC138\uD604 \uBA58\uD1A0\uB2D8 (GIT)"
+    \uC81C1\uC720\uD615\nSound effect&BGM : https://www.bensound.com,  https://soundeffect-lab.info/\nTHANKS
+    TO : PUBG \uB0A8\uC138\uD604 \uBA58\uD1A0\uB2D8 (GIT)"
 --- !u!222 &680978694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1531,7 +1532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1950518299
 RectTransform:
   m_ObjectHideFlags: 0
