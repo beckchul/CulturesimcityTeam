@@ -11,6 +11,8 @@ TagManager:
   - CloseUI
   - PromotionUI
   - PromotionStartBtn
+  - OXBtn_O
+  - OXBtn_X
   layers:
   - Default
   - TransparentFX

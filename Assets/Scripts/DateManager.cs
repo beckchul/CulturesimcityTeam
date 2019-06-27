@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DateManager : MonoBehaviour
 {
+    public RandomMision randomMision;
     public Text dateText;
     public PlayerController playerController;
     public Promotion promotion;
@@ -55,6 +56,7 @@ public class DateManager : MonoBehaviour
 
     private void MoneyManage()  //날짜가 지날때마다 발생
     {
+        randomMision.GetRadomNum();
         promotion.UpdatePeople();
         MoneyManager.Instance.GetMoney(playerController.ReturnTowerMoney());   //건물비용 획득
     }

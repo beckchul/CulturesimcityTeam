@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public Promotion promotion;
+    public RandomMision randomMision;
     public Text upgradeText;
     public Sprite[] promoImg;
     public GameObject promoBtn;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private GameObject target;
     private GameObject BuyUIObject;
     private GameObject PromoUIObject;
+    private GameObject randomMisionUIObject;
     private GameObject UpgradeObject;
 
     public GameObject[] btnlist;
@@ -32,8 +34,11 @@ public class PlayerController : MonoBehaviour
     {
         BuyUIObject = GameObject.Find("BuyUI").gameObject;
         PromoUIObject = GameObject.Find("PromotionUI").gameObject;
+        randomMisionUIObject = GameObject.Find("RandomMission").gameObject;
+
         BuyUIObject.SetActive(false);
         PromoUIObject.SetActive(false);
+        randomMisionUIObject.SetActive(false);
         SoundManager.Instance.PlayMusic(MusicSound);
     }
 
@@ -57,7 +62,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
             SoundManager.Instance.PlayEffect(EffectSound);
-            if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active)
+            if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active && !randomMisionUIObject.active)
             {
                 foreach (GameObject CulturalHeritage in CulturalHeritageList)
                 {
@@ -93,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
             #region 홍보관련
             //
-            else if (target.tag == "PromotionUI" && !BuyUIObject.active)
+            else if (target.tag == "PromotionUI" && !BuyUIObject.active && !randomMisionUIObject.active)
             {
                 PromoUIObject.SetActive(true);
             }
@@ -141,6 +146,43 @@ public class PlayerController : MonoBehaviour
                     item.tag = "Untagged";
                 }
                 promoBtn.GetComponent<SpriteRenderer>().sprite = promoBtnImg[0];
+            }
+            #endregion
+
+            #region 랜덤미션    정답 0 = O 1 = X
+            else if(target.tag == "OXBtn_O")
+            {
+                //정답이면
+                if(randomMision.ReturnMissionResult() == 0)
+                {
+                    randomMisionUIObject.SetActive(false);
+                    randomMision.missionBool = false;
+                    return;
+                }
+                //정답이 아니면
+                else
+                {
+                    MoneyManager.Instance.LoseHalfMoney();
+                    randomMisionUIObject.SetActive(false);
+                    randomMision.missionBool = false;
+                }
+            }
+            else if (target.tag == "OXBtn_X")
+            {
+                //정답이면
+                if (randomMision.ReturnMissionResult() == 1)
+                {
+                    randomMisionUIObject.SetActive(false);
+                    randomMision.missionBool = false;
+                    return;
+                }
+                //정답이 아니면
+                else
+                {
+                    MoneyManager.Instance.LoseHalfMoney();
+                    randomMisionUIObject.SetActive(false);
+                    randomMision.missionBool = false;
+                }
             }
             #endregion
         }

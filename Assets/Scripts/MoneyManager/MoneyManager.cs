@@ -25,7 +25,7 @@ public class MoneyManager : MonoBehaviour
         }
     }
     #endregion
-    
+
     public PlayerController playerController;
     public Promotion promotion;
 
@@ -43,19 +43,19 @@ public class MoneyManager : MonoBehaviour
     }
 
 
-    
-    
+
+
     //
     public void GetMoney(int money)     //money만큼 돈을 얻는다
     {
         //(관광객 수 - 최소 관광객) + money
-        playerMoney += (promotion.people - promotion.limitpeople) + money; 
+        playerMoney += (promotion.people - promotion.limitpeople) + money;
     }
 
     public void LoseMoney(int money)    //money만큼 돈을 잃는다
     {
         //돈을 가지고있을때
-        if(playerMoney>=money)
+        if (playerMoney >= money)
         {
             playerMoney -= money;
         }
@@ -64,5 +64,10 @@ public class MoneyManager : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
+    }
+
+    public void LoseHalfMoney()
+    {
+        playerMoney = playerMoney / 2;
     }
 }
