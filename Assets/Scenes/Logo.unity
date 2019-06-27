@@ -782,7 +782,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 1500, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680978693
 MonoBehaviour:
@@ -806,18 +806,45 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB3C4\uC6C0\uB9D0 \uC791\uC131 \uD14C\uC2A4\uD2B8"
+  m_Text: "\uBB38\uD654\uC7AC \uC815\uBCF4 \uCD9C\uCC98 : \uBB38\uD654\uC7AC\uCCAD
+    \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138\n\uBBF8\uB975\uC0AC\uC9C0 \uC11D\uD0D1
+    \uC0AC\uC9C4 : Mireuksaji Stone Pagoda after repair,Jjw/CC BY SA 4.0\n\uC655\uAD81\uB9AC
+    \uC624\uCE35\uC11D\uD0D1 \uC0AC\uC9C4 : \uC655\uAD81\uB9AC \uC624\uCE35\uC11D\uD0D1,Amlou2518/CC
+    BY SA 4.0\n\uC5F0\uB3D9\uB9AC \uC11D\uC870\uC5EC\uB798\uC88C\uC0C1 \uC0AC\uC9C4
+    :\uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uACE0\uB3C4\uB9AC \uC11D\uC870\uC5EC\uB798\uC785\uC0C1 \uC0AC\uC9C4
+    : \uACE0\uB3C4\uB9AC \uC11D\uC870\uC5EC\uB798\uC785\uC0C1,Amlou2518/CC BY SA 4.0\n\uC5F0\uC548\uC774\uC528
+    \uC885\uC911 \uBB38\uC801 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uC22D\uB9BC\uC0AC \uBCF4\uAD11\uC804 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD
+    \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC \uC81C1\uC720\uD615\n\uAD00\uC74C\uC0AC
+    \uBAA9\uC870\uBCF4\uC0B4\uC785\uC0C1 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uC2EC\uACE1\uC0AC \uCE60\uCE35\uC11D\uD0D1 \uCD9C\uD1A0
+    \uAE08\uB3D9\uC544\uBBF8\uD0C0\uC5EC\uB798\uCE60\uC874\uC88C\uC0C1 \uC0AC\uC9C4
+    : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uB300\uACE1\uC0AC\uBA85 \uAC10\uB85C\uC655\uB3C4 \uC0AC\uC9C4
+    : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uC775\uC0B0 \uC30D\uB989 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD
+    \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC \uC81C1\uC720\uD615\n\uC775\uC0B0
+    \uD1A0\uC131 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uC775\uC0B0 \uB098\uBC14\uC704\uC131\uB2F9 \uC0AC\uC9C4
+    : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uC775\uC0B0 \uC785\uC810\uB9AC \uACE0\uBD84 \uC0AC\uC9C4
+    : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\n\uC775\uC0B0 \uC81C\uC11D\uC0AC\uC9C0 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD
+    \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC \uC81C1\uC720\uD615\n\uC775\uC0B0
+    \uCC9C\uD638\uB3D9\uAD74 \uC0AC\uC9C4 : \uBB38\uD654\uC7AC\uCCAD \uAD6D\uAC00\uBB38\uD654\uC720\uC0B0\uD3EC\uD138/\uACF5\uACF5\uB204\uB9AC
+    \uC81C1\uC720\uD615\nTHANKS TO : PUBG \uB0A8\uC138\uD604 \uBA58\uD1A0\uB2D8 (GIT)"
 --- !u!222 &680978694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -945,7 +972,7 @@ GameObject:
   - component: {fileID: 933882409}
   - component: {fileID: 933882408}
   m_Layer: 5
-  m_Name: HlepUI
+  m_Name: HelpUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +997,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
+  m_SizeDelta: {x: 1500, y: 850}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933882408
 MonoBehaviour:
@@ -992,7 +1019,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: c3b4143958022314b920eec44062b0a2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1529,7 +1556,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
+  m_SizeDelta: {x: 1500, y: 850}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950518300
 MonoBehaviour:
@@ -1551,7 +1578,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: c3b4143958022314b920eec44062b0a2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
