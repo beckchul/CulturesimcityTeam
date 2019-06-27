@@ -31,6 +31,7 @@ public class BuyUI : MonoBehaviour
                 transform.FindChild("UpgradeButton").gameObject.SetActive(false);
 
             canvas.transform.FindChild("Text").gameObject.GetComponent<Text>().text = targetobject.GetComponent<Tower>().subText;
+            canvas.transform.FindChild("Title").gameObject.GetComponent<Text>().text = targetobject.GetComponent<Tower>().TitleText;
             pretargetobject = null;
         }
     }

@@ -11,7 +11,7 @@ public class Tower : MonoBehaviour
     public int rangePrice;  //문화재 업그레이드 격차
     public int level;       //레벨
     public string subText;  //설명문
-
+    public string TitleText;    // 타이틀
     public Sprite image_UI;
     public Sprite image_Background;
 
