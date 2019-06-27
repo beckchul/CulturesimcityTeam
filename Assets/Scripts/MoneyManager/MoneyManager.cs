@@ -25,9 +25,12 @@ public class MoneyManager : MonoBehaviour
         }
     }
     #endregion
+    
+    public PlayerController playerController;
+    public Promotion promotion;
 
     public Text text;
-    public int playerMoney = 5000;   //플레이어의 첫 가격
+    public int playerMoney;   //플레이어의 첫 가격
 
     void Start()
     {
@@ -39,9 +42,14 @@ public class MoneyManager : MonoBehaviour
         text.text = playerMoney.ToString() + " 원";
     }
 
+
+    
+    
+    //
     public void GetMoney(int money)     //money만큼 돈을 얻는다
     {
-        playerMoney += money;
+        //(관광객 수 - 최소 관광객) * money
+        playerMoney += (promotion.people - promotion.limitpeople) + money; 
     }
 
     public void LoseMoney(int money)    //money만큼 돈을 잃는다

@@ -9,6 +9,8 @@ TagManager:
   - PriceUI
   - UpgradeUI
   - CloseUI
+  - PromotionUI
+  - PromotionStartBtn
   layers:
   - Default
   - TransparentFX
