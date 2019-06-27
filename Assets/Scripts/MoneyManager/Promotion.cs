@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Promotion : MonoBehaviour
 {
+    public Text peopleText;
     public PlayerController playerController;
 
     public int people;
@@ -32,6 +33,7 @@ public class Promotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        peopleText.text = people.ToString();
     }
     
 
@@ -111,7 +113,15 @@ public class Promotion : MonoBehaviour
             //평소인가?
             else
             {
-                people -= playerController.ReturnLevelPeople_Nomal();
+                int rand = UnityEngine.Random.Range(0, 3);
+                if (rand == 0)
+                {
+                    people += playerController.ReturnLevelPeople_Tower();
+                }
+                else
+                {
+                    people -= playerController.ReturnLevelPeople_Nomal();
+                }
             }
         }
     }
