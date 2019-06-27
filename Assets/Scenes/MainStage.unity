@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 1903601915}
   - component: {fileID: 1903601914}
   m_Layer: 0
-  m_Name: UpgradeButtorn
+  m_Name: UpgradeButton
   m_TagString: UpgradeUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
