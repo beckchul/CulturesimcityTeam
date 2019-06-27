@@ -62,7 +62,15 @@ public class Promotion : MonoBehaviour
                     int rand = UnityEngine.Random.Range(0, 3);
                     if (rand <= 1)   //거품
                     {
-                        people = people / 3;
+                        int random = UnityEngine.Random.Range(0, 2);
+                        if (random == 0)
+                        {
+                            people = people / 3;
+                        }
+                        else
+                        {
+                            people = people / 3 * 2;
+                        }
                     }
                 }
             }
@@ -83,7 +91,15 @@ public class Promotion : MonoBehaviour
                     int rand = UnityEngine.Random.Range(0, 3);
                     if(rand <= 1)   //거품
                     {
-                        people = people / 3;
+                        int random = UnityEngine.Random.Range(0, 2);
+                        if (random == 0)
+                        {
+                            people = people / 3;
+                        }
+                        else
+                        {
+                            people = people / 3 * 2;
+                        }
                     }
                 }
             }
@@ -104,7 +120,15 @@ public class Promotion : MonoBehaviour
                     int rand = UnityEngine.Random.Range(0, 3);
                     if (rand <= 1)   //거품
                     {
-                        people = people / 3;
+                        int random = UnityEngine.Random.Range(0, 2);
+                        if (random == 0)
+                        {
+                            people = people / 3;
+                        }
+                        else
+                        {
+                            people = people / 3 * 2;
+                        }
                     }
                 }
             }
@@ -125,7 +149,15 @@ public class Promotion : MonoBehaviour
                     int rand = UnityEngine.Random.Range(0, 3);
                     if (rand <= 1)   //거품
                     {
-                        people = people / 3;
+                        int random = UnityEngine.Random.Range(0, 2);
+                        if (random == 0)
+                        {
+                            people = people / 3;
+                        }
+                        else
+                        {
+                            people = people / 3 * 2;
+                        }
                     }
                 }
             }
