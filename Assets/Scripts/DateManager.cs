@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DateManager : MonoBehaviour
 {
     public Text dateText;
+    public PlayerController playerController;
 
     private float time;
     private float timeinit = 4f;//1일 = 5초
@@ -31,12 +32,14 @@ public class DateManager : MonoBehaviour
             {
                 day++;
                 UpdateDate();
+                MoneyManage();
             }
             else
             {
                 month++;
                 day = 1;
                 UpdateDate();
+                MoneyManage();
             }
             timer = true;
         }
@@ -47,6 +50,12 @@ public class DateManager : MonoBehaviour
         {
             timer = false;
         }
+    }
+
+    private void MoneyManage()  //날짜가 지날때마다 발생
+    {
+        MoneyManager.Instance.GetMoney(playerController.ReturnTowerMoney());   //건물비용 획득
+        MoneyManager.Instance.LoseMoney(playerController.ReturnTowerFree());  //관리비 소모
     }
 
     void UpdateDate()   //날짜갱신
