@@ -48,7 +48,7 @@ public class MoneyManager : MonoBehaviour
     //
     public void GetMoney(int money)     //money만큼 돈을 얻는다
     {
-        //(관광객 수 - 최소 관광객) * money
+        //(관광객 수 - 최소 관광객) + money
         playerMoney += (promotion.people - promotion.limitpeople) + money; 
     }
 

@@ -51,12 +51,19 @@ public class Promotion : MonoBehaviour
                 //관광객수정
                 people += playerController.ReturnLevelPeople_Promo(4);
                 //
-                if(date <= 1)
+                if(date <= 0)
                 {
                     date = 5;
                     //비활성화
                     tv = false;
                     playerController.OnActivePromoList();
+
+                    //랜덤으로 거품끼던가 유지하던가
+                    int rand = UnityEngine.Random.Range(0, 3);
+                    if (rand <= 1)   //거품
+                    {
+                        people = people / 3;
+                    }
                 }
             }
             else if (radio)
@@ -65,12 +72,19 @@ public class Promotion : MonoBehaviour
                 date--;
                 //관광객수정
                 people += playerController.ReturnLevelPeople_Promo(3);
-                if (date <= 1)
+                if (date <= 0)
                 {
                     date = 5;
                     //비활성화
                     radio = false;
                     playerController.OnActivePromoList();
+                    
+                    //랜덤으로 거품끼던가 유지하던가
+                    int rand = UnityEngine.Random.Range(0, 3);
+                    if(rand <= 1)   //거품
+                    {
+                        people = people / 3;
+                    }
                 }
             }
             else if(news)
@@ -79,12 +93,19 @@ public class Promotion : MonoBehaviour
                 date--;
                 //관광객수정
                 people += playerController.ReturnLevelPeople_Promo(2);
-                if (date <= 1)
+                if (date <= 0)
                 {
                     date = 5;
                     //비활성화
                     news = false;
                     playerController.OnActivePromoList();
+
+                    //랜덤으로 거품끼던가 유지하던가
+                    int rand = UnityEngine.Random.Range(0, 3);
+                    if (rand <= 1)   //거품
+                    {
+                        people = people / 3;
+                    }
                 }
             }
             else if(sns)
@@ -93,12 +114,19 @@ public class Promotion : MonoBehaviour
                 date--;
                 //관광객수정
                 people += playerController.ReturnLevelPeople_Promo(5);
-                if (date <= 1)
+                if (date <= 0)
                 {
                     date = 5;
                     //비활성화
                     sns = false;
                     playerController.OnActivePromoList();
+
+                    //랜덤으로 거품끼던가 유지하던가
+                    int rand = UnityEngine.Random.Range(0, 3);
+                    if (rand <= 1)   //거품
+                    {
+                        people = people / 3;
+                    }
                 }
             }
         }
