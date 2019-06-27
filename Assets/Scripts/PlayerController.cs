@@ -5,11 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Promotion promotion;
 
     public GameObject[] CulturalHeritageList;
     private GameObject target;
     private GameObject BuyUIObject;
+    private GameObject PromoUIObject;
     private GameObject UpgradeObject;
+
+    public GameObject[] btnlist;
 
     private void Awake()
     {
@@ -19,7 +23,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         BuyUIObject = GameObject.Find("BuyUI").gameObject;
-        BuyUIObject.gameObject.SetActive(false);
+        PromoUIObject = GameObject.Find("PromotionUI").gameObject;
+        BuyUIObject.SetActive(false);
+        PromoUIObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,12 +39,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CastRay();
+
+            #region 문화재 클릭 & 업그레이드 & 닫기
             if (!target)
             {
                 BuyUIObject.SetActive(false);
+                PromoUIObject.SetActive(false);
                 return;
             }
-            else if (target.tag == "Point" && !BuyUIObject.active)
+            else if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active)
             {
                 foreach (GameObject CulturalHeritage in CulturalHeritageList)
                 {
@@ -50,18 +59,80 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+
+            //
             else if (target.tag == "UpgradeUI")
             {
-                Debug.Log("?");
                 UpgradeObject.GetComponent<Tower>().LevelUp();
                 BuyUIObject.SetActive(false);
             }
             else if (target.tag == "CloseUI")
             {
-                Debug.Log("?");
                 BuyUIObject.SetActive(false);
+                PromoUIObject.SetActive(false);
                 return;
             }
+            //
+            #endregion
+
+            #region 홍보관련
+            //
+            else if (target.tag == "PromotionUI" && !BuyUIObject.active)
+            {
+                PromoUIObject.SetActive(true);
+            }
+
+            //홍보버튼클릭
+            else if (target.tag == "PromotionStartBtn")
+            {
+                if (target.gameObject.name == "PromoBtn_TV")
+                {
+                    //돈차감
+                    MoneyManager.Instance.LoseMoney(30000);
+                    //활성화
+                    promotion.tv = true;
+                    PromoUIObject.SetActive(false);
+                }
+                else if (target.gameObject.name == "PromoBtn_Radio")
+                {
+                    //돈차감
+                    MoneyManager.Instance.LoseMoney(20000);
+                    //활성화
+                    promotion.radio = true;
+                    PromoUIObject.SetActive(false);
+                }
+                else if(target.gameObject.name == "PromoBtn_News")
+                {
+                    //돈차감
+                    MoneyManager.Instance.LoseMoney(10000);
+                    //활성화
+                    promotion.news = true;
+                    PromoUIObject.SetActive(false);
+                }
+                else if(target.gameObject.name == "PromoBtn_SNS")
+                {
+                    //돈차감
+                    MoneyManager.Instance.LoseMoney(50000);
+                    //활성화
+                    promotion.sns = true;
+                    PromoUIObject.SetActive(false);
+                }
+                
+                //버튼 전체 비활성화
+                foreach(GameObject item in btnlist)
+                {
+                    item.SetActive(false);
+                }
+            }
+            #endregion
+        }
+    }
+
+    public void OnActivePromoList()
+    {
+        foreach (GameObject item in btnlist)
+        {
+            item.SetActive(true);
         }
     }
 
@@ -74,31 +145,109 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             target = hit.collider.gameObject;  //히트 된 게임 오브젝트를 타겟으로 지정
-            Debug.Log(target);
         }
     }
 
 
-    //건물버는가격받아오기
+
+    public int ReturnLevelPeople_Nomal()
+    {
+        int num = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            if (CulturalHeritage.GetComponent<Tower>().level == 1)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople /3; //5
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 2)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / 6;   //10
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 3)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople /10;    //20
+            }
+        }
+        return num;
+    }
+    public int ReturnLevelPeople_Tower()
+    {
+        int num = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            if (CulturalHeritage.GetComponent<Tower>().level == 1)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople /3;
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 2)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / 2;
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 3)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople;
+            }
+        }
+        return num;
+    }
+    public int ReturnLevelPeople_Promo(int value)
+    {
+        int num = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            if (CulturalHeritage.GetComponent<Tower>().level == 1)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople * value /3;
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 2)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople * value / 2;
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 3)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople * value;
+            }
+        }
+        return num;
+    }
+
+
+
+    // 건물 레벨 받아오기
+    List<int> TowerLevelList()
+    {
+        int level1 = 0;
+        int level2 = 0;
+        int level3 = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            if(CulturalHeritage.GetComponent<Tower>().level == 1)
+            {
+                ++level1;
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 2)
+            {
+                ++level2;
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 3)
+            {
+                ++level3;
+            }
+        }
+        List<int> list = new List<int>();
+        list.Add(level1);
+        list.Add(level2);
+        list.Add(level3);
+        return list;
+
+    }
+    
+    //레벨비율에 맞춰서 돈벌기
     public int ReturnTowerMoney()
     {
-        int value = 0;
-        foreach (GameObject CulturalHeritage in CulturalHeritageList)
-        {
-            value += CulturalHeritage.GetComponent<Tower>().towermoney;
-            Debug.Log(CulturalHeritage.name + "건물비" + CulturalHeritage.GetComponent<Tower>().towermoney);
-        }
-        return value;
+        List<int> levellist = TowerLevelList();
+
+        return (levellist[0] * 1) + (levellist[1] * 2) + (levellist[2] * 3);
     }
-    //건물관리비받아오기
-    public int ReturnTowerFree()
-    {
-        int value = 0;
-        foreach (GameObject CulturalHeritage in CulturalHeritageList)
-        {
-            value += CulturalHeritage.GetComponent<Tower>().free;
-            Debug.Log(CulturalHeritage.name + "관리비" + CulturalHeritage.GetComponent<Tower>().free);
-        }
-        return value;
-    }
+    
 }
