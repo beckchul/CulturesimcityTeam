@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Promotion : MonoBehaviour
 {
     public PlayerController playerController;
-    public Text peopleText;
 
     public int people;
     public int limitpeople;
@@ -28,26 +27,18 @@ public class Promotion : MonoBehaviour
         sns = false;
         tower = false;
         date = 5;
-        UpdateText();
     }
 
     // Update is called once per frame
     void Update()
     {
     }
-
-    //관광객 수 텍스트 업데이트
-    void UpdateText()
-    {
-        peopleText.text = playerController.ReturnPeopleNum().ToString() + "명";
-    }
-
+    
 
 
     //날짜 지날때마다 관광객 수정
     public void UpdatePeople()
     {
-        UpdateText();
         //홍보중인가?
         if (tv || radio || news || sns)
         {

@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public Promotion promotion;
     public Text upgradeText;
+    public Sprite[] promoImg;
+    public GameObject promoBtn;
+    public Sprite[] promoBtnImg;
 
     public GameObject[] CulturalHeritageList;
     private GameObject target;
@@ -129,19 +132,24 @@ public class PlayerController : MonoBehaviour
                 //버튼 전체 비활성화
                 foreach(GameObject item in btnlist)
                 {
-                    item.SetActive(false);
+                    item.GetComponent<SpriteRenderer>().sprite = promoImg[0];
+                    item.tag = "Untagged";
                 }
+                promoBtn.GetComponent<SpriteRenderer>().sprite = promoBtnImg[0];
             }
             #endregion
         }
     }
 
+    //버튼 전체 활성화
     public void OnActivePromoList()
     {
         foreach (GameObject item in btnlist)
         {
-            item.SetActive(true);
+            item.GetComponent<SpriteRenderer>().sprite = promoImg[1];
+            item.tag = "PromotionStartBtn";
         }
+        promoBtn.GetComponent<SpriteRenderer>().sprite = promoBtnImg[1];
     }
 
     void CastRay() // 유닛 히트처리 부분.  레이를 쏴서 처리합니다. 
