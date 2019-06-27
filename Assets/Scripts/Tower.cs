@@ -11,7 +11,7 @@ public class Tower : MonoBehaviour
     public int level;       //레벨
 
     public Sprite image_UI;
-    public Sprite[] image_Background;
+    public Sprite image_Background;
 
     private SpriteRenderer render;
 
@@ -20,21 +20,30 @@ public class Tower : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         promotion = GameObject.Find("PromotionManager").GetComponent<Promotion>();
     }
-    public void LevelUp()
+    public int LevelUp()
     {
         if (level >= 3)
         {
             Debug.Log("업그레이드 불가능");
-            return;
+            return level;
         }
         ++level;
         //가격올라가기전에 돈빼주기
         MoneyManager.Instance.LoseMoney(price);
         Debug.Log(price + "원으로 업그레이드");
+<<<<<<< HEAD
         //건물을 방금 지음
         promotion.tower = true;
         price += 50000;
         render.sprite = image_Background[level - 1];
+=======
+        //
+        towermoney += 300;
+        price += 200;
+        free += 200;
+        GetComponent<SpriteRenderer>().sprite = image_Background;
+        return level;
+>>>>>>> 3aa3b3898d71b6f36858fadd3da321c05d30982a
     }
 
     void Update()

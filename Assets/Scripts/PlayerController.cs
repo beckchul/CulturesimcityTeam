@@ -63,7 +63,13 @@ public class PlayerController : MonoBehaviour
             //
             else if (target.tag == "UpgradeUI")
             {
+<<<<<<< HEAD
                 UpgradeObject.GetComponent<Tower>().LevelUp();
+=======
+                Debug.Log("?");
+                int Level = UpgradeObject.GetComponent<Tower>().LevelUp();
+                UpgradeObject.transform.localScale = new Vector3(0.2f + Level * 0.05f, 0.2f + Level * 0.05f, 1.0f);
+>>>>>>> 3aa3b3898d71b6f36858fadd3da321c05d30982a
                 BuyUIObject.SetActive(false);
             }
             else if (target.tag == "CloseUI")
