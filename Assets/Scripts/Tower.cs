@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     public int level = 1;
 
     public Sprite image_UI;
-    public Sprite[] image_Background;
+    public Sprite image_Background;
 
     private SpriteRenderer render;
 
@@ -18,12 +18,12 @@ public class Tower : MonoBehaviour
     {
         render = GetComponent<SpriteRenderer>();
     }
-    public void LevelUp()
+    public int LevelUp()
     {
         if (level >= 3)
         {
             Debug.Log("업그레이드 불가능");
-            return;
+            return level;
         }
         ++level;
         Debug.Log(price + "원으로 업그레이드");
@@ -34,7 +34,8 @@ public class Tower : MonoBehaviour
         towermoney += 300;
         price += 200;
         free += 200;
-        render.sprite = image_Background[level - 1];
+        GetComponent<SpriteRenderer>().sprite = image_Background;
+        return level;
     }
 
     void Update()
