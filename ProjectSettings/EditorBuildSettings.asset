@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Logo.unity
     guid: f9e7904988b8481419fc913525f67c6f
   - enabled: 1
+    path: Assets/Scenes/MainStage 1.unity
+    guid: 1f783f8ea291c884abe0800fa880a8c5
+  - enabled: 1
     path: Assets/Scenes/MainStage.unity
     guid: 4a553b983de3d4e4e90329e65d281f2d
   - enabled: 1

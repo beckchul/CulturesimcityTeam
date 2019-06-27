@@ -31,19 +31,11 @@ public class Tower : MonoBehaviour
         //가격올라가기전에 돈빼주기
         MoneyManager.Instance.LoseMoney(price);
         Debug.Log(price + "원으로 업그레이드");
-<<<<<<< HEAD
         //건물을 방금 지음
         promotion.tower = true;
         price += 50000;
-        render.sprite = image_Background[level - 1];
-=======
-        //
-        towermoney += 300;
-        price += 200;
-        free += 200;
         GetComponent<SpriteRenderer>().sprite = image_Background;
         return level;
->>>>>>> 3aa3b3898d71b6f36858fadd3da321c05d30982a
     }
 
     void Update()
