@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Promotion : MonoBehaviour
 {
@@ -30,9 +32,9 @@ public class Promotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     
+
 
     //날짜 지날때마다 관광객 수정
     public void UpdatePeople()

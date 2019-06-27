@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public Promotion promotion;
+    public Text upgradeText;
+    public Sprite[] promoImg;
+    public GameObject promoBtn;
+    public Sprite[] promoBtnImg;
 
     public GameObject[] CulturalHeritageList;
     private GameObject target;
@@ -55,15 +60,22 @@ public class PlayerController : MonoBehaviour
                     {
                         UpgradeObject = target.gameObject;
                         BuyUIObject.SetActive(true);
+                        if (UpgradeObject.GetComponent<Tower>().level == 3)
+                        {
+                            upgradeText.text = "업그레이드 완료";
+                        }
+                        else
+                        {
+                            upgradeText.text = UpgradeObject.GetComponent<Tower>().price.ToString();
+                        }
                         BuyUIObject.GetComponent<BuyUI>().setTarget(target.gameObject);
                     }
                 }
             }
             else if (target.tag == "UpgradeUI")
             {
-                Debug.Log("?");
                 int Level = UpgradeObject.GetComponent<Tower>().LevelUp();
-                UpgradeObject.transform.localScale = new Vector3(0.15f + Level * 0.7f, 0.15f + Level * 0.7f, 1.0f);
+                UpgradeObject.transform.localScale = new Vector3(0.15f + Level * 0.07f, 0.15f + Level * 0.07f, 1.0f);
                 BuyUIObject.SetActive(false);
             }
             else if (target.tag == "CloseUI")
@@ -120,19 +132,24 @@ public class PlayerController : MonoBehaviour
                 //버튼 전체 비활성화
                 foreach(GameObject item in btnlist)
                 {
-                    item.SetActive(false);
+                    item.GetComponent<SpriteRenderer>().sprite = promoImg[0];
+                    item.tag = "Untagged";
                 }
+                promoBtn.GetComponent<SpriteRenderer>().sprite = promoBtnImg[0];
             }
             #endregion
         }
     }
 
+    //버튼 전체 활성화
     public void OnActivePromoList()
     {
         foreach (GameObject item in btnlist)
         {
-            item.SetActive(true);
+            item.GetComponent<SpriteRenderer>().sprite = promoImg[1];
+            item.tag = "PromotionStartBtn";
         }
+        promoBtn.GetComponent<SpriteRenderer>().sprite = promoBtnImg[1];
     }
 
     void CastRay() // 유닛 히트처리 부분.  레이를 쏴서 처리합니다. 
@@ -248,5 +265,30 @@ public class PlayerController : MonoBehaviour
 
         return (levellist[0] * 1) + (levellist[1] * 2) + (levellist[2] * 3);
     }
-    
+
+
+
+
+
+    //전체 인원수 구하기
+    public int ReturnPeopleNum()
+    {
+        int num = 0;
+        foreach (GameObject CulturalHeritage in CulturalHeritageList)
+        {
+            if (CulturalHeritage.GetComponent<Tower>().level == 1)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / 3; //5
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 2)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / 6;   //10
+            }
+            else if (CulturalHeritage.GetComponent<Tower>().level == 3)
+            {
+                num += CulturalHeritage.GetComponent<Tower>().endpeople / 10;    //20
+            }
+        }
+        return num;
+    }
 }
