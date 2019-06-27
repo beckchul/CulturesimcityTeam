@@ -7,6 +7,7 @@ public class BuyUI : MonoBehaviour
 {
     GameObject targetobject = null;
     GameObject pretargetobject = null;
+    public GameObject canvas;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class BuyUI : MonoBehaviour
             if (targetobject.GetComponent<Tower>().level == 3)
                 transform.FindChild("UpgradeButton").gameObject.SetActive(false);
 
-            transform.FindChild("Canvas").transform.FindChild("Text").gameObject.GetComponent<Text>().text = targetobject.GetComponent<Tower>().subText;
+            canvas.transform.FindChild("Text").gameObject.GetComponent<Text>().text = targetobject.GetComponent<Tower>().subText;
             pretargetobject = null;
         }
     }
