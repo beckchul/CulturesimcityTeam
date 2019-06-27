@@ -8,6 +8,7 @@ TagManager:
   - BuyUI
   - PriceUI
   - UpgradeUI
+  - CloseUI
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UIFront
   - 
   - 
   - 

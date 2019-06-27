@@ -52,8 +52,15 @@ public class PlayerController : MonoBehaviour
             }
             else if (target.tag == "UpgradeUI")
             {
+                Debug.Log("?");
                 UpgradeObject.GetComponent<Tower>().LevelUp();
                 BuyUIObject.SetActive(false);
+            }
+            else if (target.tag == "CloseUI")
+            {
+                Debug.Log("?");
+                BuyUIObject.SetActive(false);
+                return;
             }
         }
     }
@@ -67,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             target = hit.collider.gameObject;  //히트 된 게임 오브젝트를 타겟으로 지정
+            Debug.Log(target);
         }
     }
 

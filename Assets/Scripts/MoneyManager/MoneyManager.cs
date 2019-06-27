@@ -27,7 +27,7 @@ public class MoneyManager : MonoBehaviour
     #endregion
 
     public Text text;
-    public int playerMoney = 100;   //플레이어의 첫 가격
+    public int playerMoney = 5000;   //플레이어의 첫 가격
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class MoneyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = playerMoney.ToString();
+        text.text = playerMoney.ToString() + " 원";
     }
 
     public void GetMoney(int money)     //money만큼 돈을 얻는다

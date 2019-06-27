@@ -21,7 +21,10 @@ public class Tower : MonoBehaviour
     public void LevelUp()
     {
         if (level >= 3)
+        {
+            Debug.Log("업그레이드 불가능");
             return;
+        }
         ++level;
         Debug.Log(price + "원으로 업그레이드");
         //가격올라가기전에 돈빼주기
