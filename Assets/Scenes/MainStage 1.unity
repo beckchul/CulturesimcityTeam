@@ -403,7 +403,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -609,7 +609,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -955,7 +955,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -1156,7 +1156,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -1435,7 +1435,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -1708,7 +1708,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -2620,7 +2620,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -2806,7 +2806,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -3561,7 +3561,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -4048,7 +4048,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -4746,7 +4746,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3479e61edd6de434e912a5c4db5b28cb, type: 3}
@@ -4963,7 +4963,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3479e61edd6de434e912a5c4db5b28cb, type: 3}
@@ -5282,7 +5282,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -5468,7 +5468,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     - target: {fileID: 7047410789061868678, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
@@ -5999,7 +5999,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca63a35e86dc8254993415df763b74e4,
+      objectReference: {fileID: 21300000, guid: 35177475a8bd7f541bf5934f5d802f0b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3479e61edd6de434e912a5c4db5b28cb, type: 3}
@@ -6490,7 +6490,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2fddb6a5451a19645ab68fb3164ce673, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa093574b82f50d4d9f7473d12d3bb0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
