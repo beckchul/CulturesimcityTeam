@@ -23,6 +23,7 @@ public class Tower : MonoBehaviour
         if (level >= 3)
             return;
         ++level;
+        Debug.Log(price + "원으로 업그레이드");
         //가격올라가기전에 돈빼주기
         MoneyManager.Instance.LoseMoney(price);
         Debug.Log(price + "원으로 업그레이드");
