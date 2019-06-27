@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
 
     public int endpeople;   //감소하는 최대인원수
     public int price;       //문화재 업그레이드 가격
+    public int rangePrice;  //문화재 업그레이드 격차
     public int level;       //레벨
 
     public Sprite image_UI;
@@ -33,7 +34,7 @@ public class Tower : MonoBehaviour
         Debug.Log(price + "원으로 업그레이드");
         //건물을 방금 지음
         promotion.tower = true;
-        price += 50000;
+        price += rangePrice;
         GetComponent<SpriteRenderer>().sprite = image_Background;
         return level;
     }
