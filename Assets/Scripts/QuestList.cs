@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestList : MonoBehaviour
 {
@@ -33,9 +34,14 @@ public class QuestList : MonoBehaviour
             if (CulturalHeritage.GetComponent<Tower>().level < 3)
                 QuestListCheck[2] = false;
 
-            if (MoneyManager.Instance.playerMoney < 10000)
+            if (MoneyManager.Instance.playerMoney < 300000)
                 QuestListCheck[3] = false;
         }
+
+        if (PlayerControl.CulturalHeritageList[0].GetComponent<Tower>().level == 0 ||
+            PlayerControl.CulturalHeritageList[1].GetComponent<Tower>().level == 0)
+            QuestListCheck[4] = false;
+
 
         for (int i = 0; i < QuestListCheck.Length; ++i)
         {
@@ -49,5 +55,9 @@ public class QuestList : MonoBehaviour
             }
         }
 
+        if(QuestListCheck[2] == true)
+        {
+            SceneManager.LoadScene(4);
+        }
     }
 }
