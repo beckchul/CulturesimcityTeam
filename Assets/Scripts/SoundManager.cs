@@ -23,7 +23,6 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource musicSource;
     public AudioSource effectSource;
-    public AudioSource LogoSource;
 
     private void Awake()
     {

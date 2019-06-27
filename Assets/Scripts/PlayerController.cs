@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject[] btnlist;
 
+    public AudioClip MusicSound;
+    public AudioClip EffectSound;
+
     private void Awake()
     {
         Screen.SetResolution(1920, 1080, true);
@@ -31,6 +34,7 @@ public class PlayerController : MonoBehaviour
         PromoUIObject = GameObject.Find("PromotionUI").gameObject;
         BuyUIObject.SetActive(false);
         PromoUIObject.SetActive(false);
+        SoundManager.Instance.PlayMusic(MusicSound);
     }
 
     // Update is called once per frame
@@ -52,7 +56,8 @@ public class PlayerController : MonoBehaviour
                 PromoUIObject.SetActive(false);
                 return;
             }
-            else if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active)
+            SoundManager.Instance.PlayEffect(EffectSound);
+            if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active)
             {
                 foreach (GameObject CulturalHeritage in CulturalHeritageList)
                 {

@@ -6751,6 +6751,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3585da2eae1da774693dda5c08b101ec,
         type: 3}
+    - target: {fileID: 1827412519858129149, guid: 1ab18cccd313df44fa24a141d761c1df,
+        type: 3}
+      propertyPath: EffectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dee7a2f5433e18140ab8e5a27f853d0b, type: 3}
+    - target: {fileID: 1827412519858129149, guid: 1ab18cccd313df44fa24a141d761c1df,
+        type: 3}
+      propertyPath: MusicSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 938e2ddc2092aee4ea9dce38aa465800, type: 3}
     - target: {fileID: 1827412519858129150, guid: 1ab18cccd313df44fa24a141d761c1df,
         type: 3}
       propertyPath: m_LocalPosition.x
