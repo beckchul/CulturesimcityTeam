@@ -1216,7 +1216,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: "\uC548\uB155\uD558\uC138\uC694\n"
 --- !u!222 &481373594
 CanvasRenderer:
