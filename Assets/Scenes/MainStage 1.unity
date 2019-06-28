@@ -1905,6 +1905,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 34d858cdf54169c4f9de9c3da11eb6af, type: 3}
   - {fileID: 21300000, guid: c302c89431d6c3843be67a92fe81cef2, type: 3}
   - {fileID: 21300000, guid: 23f54ca8b458639408ab485f6bc4ddae, type: 3}
+  rand: 0
   missionBool: 0
 --- !u!4 &688861192
 Transform:
@@ -5592,7 +5593,7 @@ PrefabInstance:
     - target: {fileID: 2458778066834743243, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
       propertyPath: TitleText
-      value: "\uC775\uC0B0 \uCC9C\uD638\uB3D9"
+      value: "\uC775\uC0B0 \uCC9C\uD638\uB3D9\uAD74"
       objectReference: {fileID: 0}
     - target: {fileID: 6290422655100139413, guid: 3479e61edd6de434e912a5c4db5b28cb,
         type: 3}
