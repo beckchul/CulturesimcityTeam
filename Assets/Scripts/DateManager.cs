@@ -39,6 +39,8 @@ public class DateManager : MonoBehaviour
             else
             {
                 month++;
+                if (month > 12)
+                    month = 1;
                 day = 1;
                 UpdateDate();
                 MoneyManage();
