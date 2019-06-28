@@ -190,6 +190,11 @@ public class PlayerController : MonoBehaviour
                 }
             }
             #endregion
+
+            else if( target.tag == "MoneyBtn")
+            {
+                MoneyManager.Instance.GetMoneyBtn();
+            }
         }
     }
 

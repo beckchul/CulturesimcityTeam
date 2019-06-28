@@ -13,6 +13,7 @@ TagManager:
   - PromotionStartBtn
   - OXBtn_O
   - OXBtn_X
+  - MoneyBtn
   layers:
   - Default
   - TransparentFX

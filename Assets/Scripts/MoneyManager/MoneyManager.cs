@@ -70,4 +70,9 @@ public class MoneyManager : MonoBehaviour
     {
         playerMoney = playerMoney / 2;
     }
+
+    public void GetMoneyBtn()
+    {
+        playerMoney += 10;
+    }
 }
