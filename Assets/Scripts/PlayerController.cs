@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private GameObject PromoUIObject;
     private GameObject randomMisionUIObject;
     private GameObject UpgradeObject;
+    private GameObject posterObject;
 
     public GameObject[] btnlist;
 
@@ -35,10 +36,12 @@ public class PlayerController : MonoBehaviour
         BuyUIObject = GameObject.Find("BuyUI").gameObject;
         PromoUIObject = GameObject.Find("PromotionUI").gameObject;
         randomMisionUIObject = GameObject.Find("RandomMission").gameObject;
+        posterObject = GameObject.Find("OpenhackImg").gameObject;
 
         BuyUIObject.SetActive(false);
         PromoUIObject.SetActive(false);
         randomMisionUIObject.SetActive(false);
+        posterObject.SetActive(false);
         SoundManager.Instance.PlayMusic(MusicSound);
     }
 
@@ -54,15 +57,18 @@ public class PlayerController : MonoBehaviour
         {
             CastRay();
 
+            
             #region 문화재 클릭 & 업그레이드 & 닫기
             if (!target)
             {
                 BuyUIObject.SetActive(false);
                 PromoUIObject.SetActive(false);
+                posterObject.SetActive(false);
                 return;
             }
             SoundManager.Instance.PlayEffect(EffectSound);
-            if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active && !randomMisionUIObject.active)
+
+            if (target.tag == "Point" && !BuyUIObject.active && !PromoUIObject.active && !randomMisionUIObject.active && !posterObject.active)
             {
                 foreach (GameObject CulturalHeritage in CulturalHeritageList)
                 {
@@ -101,9 +107,16 @@ public class PlayerController : MonoBehaviour
             }
             #endregion
 
+            #region 이스터에그
+            else if (target.tag == "OpenhackBtn" && !BuyUIObject.active && !PromoUIObject.active && !randomMisionUIObject.active)
+            {
+                posterObject.SetActive(true);
+            }
+            #endregion
+
             #region 홍보관련
             //
-            else if (target.tag == "PromotionUI" && !BuyUIObject.active && !randomMisionUIObject.active)
+            else if (target.tag == "PromotionUI" && !BuyUIObject.active && !randomMisionUIObject.active && !posterObject.active)
             {
                 PromoUIObject.SetActive(true);
             }
@@ -127,7 +140,7 @@ public class PlayerController : MonoBehaviour
                     promotion.radio = true;
                     PromoUIObject.SetActive(false);
                 }
-                else if(target.gameObject.name == "PromoBtn_News")
+                else if (target.gameObject.name == "PromoBtn_News")
                 {
                     //돈차감
                     MoneyManager.Instance.LoseMoney(10000);
@@ -135,7 +148,7 @@ public class PlayerController : MonoBehaviour
                     promotion.news = true;
                     PromoUIObject.SetActive(false);
                 }
-                else if(target.gameObject.name == "PromoBtn_SNS")
+                else if (target.gameObject.name == "PromoBtn_SNS")
                 {
                     //돈차감
                     MoneyManager.Instance.LoseMoney(50000);
@@ -143,9 +156,9 @@ public class PlayerController : MonoBehaviour
                     promotion.sns = true;
                     PromoUIObject.SetActive(false);
                 }
-                
+
                 //버튼 전체 비활성화
-                foreach(GameObject item in btnlist)
+                foreach (GameObject item in btnlist)
                 {
                     item.GetComponent<SpriteRenderer>().sprite = promoImg[0];
                     item.tag = "Untagged";
@@ -155,10 +168,10 @@ public class PlayerController : MonoBehaviour
             #endregion
 
             #region 랜덤미션    정답 0 = O 1 = X
-            else if(target.tag == "OXBtn_O")
+            else if (target.tag == "OXBtn_O")
             {
                 //정답이면
-                if(randomMision.ReturnMissionResult() == 0)
+                if (randomMision.ReturnMissionResult() == 0)
                 {
                     randomMisionUIObject.SetActive(false);
                     randomMision.missionBool = false;
@@ -191,7 +204,7 @@ public class PlayerController : MonoBehaviour
             }
             #endregion
 
-            else if( target.tag == "MoneyBtn")
+            else if (target.tag == "MoneyBtn")
             {
                 MoneyManager.Instance.GetMoneyBtn();
             }

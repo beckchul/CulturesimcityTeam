@@ -14,6 +14,8 @@ TagManager:
   - OXBtn_O
   - OXBtn_X
   - MoneyBtn
+  - OpenhackBtn
+  - Poster
   layers:
   - Default
   - TransparentFX
