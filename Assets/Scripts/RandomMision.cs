@@ -39,7 +39,7 @@ public class RandomMision : MonoBehaviour
     {
         if (!missionBool)
         {
-            rand = UnityEngine.Random.Range(0, 10) + 1;
+            rand = UnityEngine.Random.Range(0, 20) + 1;
         }
     }
 
