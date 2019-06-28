@@ -76,7 +76,12 @@ public class PlayerController : MonoBehaviour
                         }
                         else
                         {
-                            upgradeText.text = UpgradeObject.GetComponent<Tower>().price.ToString();
+                            int priceNum = UpgradeObject.GetComponent<Tower>().price;
+                            int First = priceNum / 1000;
+                            int Second = (priceNum % 1000) / 100;
+                            int Third = (priceNum % 100) / 10;
+                            int Fourth = priceNum % 10;
+                            upgradeText.text = First.ToString() + ","+ Second.ToString() + Third.ToString() + Fourth.ToString() + "원";
                         }
                         BuyUIObject.GetComponent<BuyUI>().setTarget(target.gameObject);
                     }
